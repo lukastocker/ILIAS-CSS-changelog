@@ -1,4 +1,4 @@
-![ILIAS CSS Maintenance Initiative Changelog](imgs/top-level/header_ILIAS-CSS-maintenance-initiative_changelog.png)
+![ILIAS CSS Maintenance Initiative Changelog](_imgs/top-level/header_ILIAS-CSS-maintenance-initiative_changelog.png)
 
 This repository documents all **css changes and their impact** as well as the status of **ongoing design projects** done by the CSS Maintenance Initiative powered by the [University of Bern](https://www.unibe.ch/) and [Concepts and Training GmbH](https://concepts-and-training.de/).
 
