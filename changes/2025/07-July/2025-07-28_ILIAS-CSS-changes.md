@@ -1,5 +1,10 @@
 ![CSS changes 28.07 - 03.08.25](../../../_imgs/entries/2025/07-July/header_changelog-entry_july-w5.png)
 
+The following changes are made possible with resources from the [University of Bern](https://www.unibe.ch/) and [Concepts and Training GmbH](https://concepts-and-training.de/).
+
+> [!IMPORTANT]
+> If improved UX and UI in ILIAS are important to you, please consider supporting our initiative with funding or by regularily investing work hours. Anyone who joins us will get regular shout outs on reports and any activity carried by the initiative.
+
 # Week 5 of July
 
 ## Inactive Buttons in Dropdown
