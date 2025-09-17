@@ -5,10 +5,26 @@ The following changes are made possible with resources from the [University of B
 
 # September 2025
 
-## Inactive Buttons in Dropdown
+## Readability of system infos 45167 
 
 `small impact` `UI framework` `readability`
 
-[→ Mantis Issue](https://mantis.ilias.de/view.php?id=45480) [→ PR ILIAS 10](https://github.com/ILIAS-eLearning/ILIAS/pull/9922)
+[→ Mantis Issue](https://mantis.ilias.de/view.php?id=45167) [→ PR](https://github.com/ILIAS-eLearning/ILIAS/pull/10098)
 
 ### Issue
+
+* when system infos have dark backgrounds, the text, links, close button are not readable
+* the color contrast tool seems to not be working in this context
+
+### Changes
+
+![assets_comparison-horizontal-split.png](../../../_imgs/entries/2025/09-September/assets_comparison-horizontal-split.png)
+
+* There was an issue with the SCSS contrast tool that is supposed to switch the text to white not being loaded correctly - it's actually weird that this compiled at all.
+* added a restyling of links to guarantee visibility on dark backgrounds
+
+I think this section is now a good example of how to flip text color to white depending on the background.
+
+### Larger Scope
+
+* Currently, we use the main-bg color everywhere when we need white in delos, but there might be cases where we need to differentiate between main-bg color and the most/least contrasting text color. It might be smarter to work with variables like $color-no-contrast-to-main-bg and $color-most-contrast-to-main-bg. We should discuss this during a CSS Squad Meeting.
