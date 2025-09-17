@@ -11,7 +11,7 @@ The following changes are made possible with resources from the [University of B
 
 `medium impact` `UI framework` `mental model`
 
-[→ Mantis Issue](https://mantis.ilias.de/view.php?id=45480) [→ PR ILIAS 10](https://github.com/ILIAS-eLearning/ILIAS/pull/9922)
+[→ Mantis Issue](https://mantis.ilias.de/view.php?id=45480) [→ PR ILIAS 10](https://github.com/ILIAS-eLearning/ILIAS/pull/9922) [→ PR ILIAS 9](https://github.com/ILIAS-eLearning/ILIAS/pull/10089)
 
 ### Issue
 
