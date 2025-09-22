@@ -53,3 +53,23 @@ UI Component (Input) ViewControl Pagination
 
 * Fix: No rendering of disabled pagination components (left and right rocker)
 * Fix: No rendering of pagination if only one page would be rendered
+
+---
+
+## Missing blur effect on modal background in Firefox
+
+`small impact` `UI framework` `visual improvement`
+
+[→ Mantis Issue](https://mantis.ilias.de/view.php?id=42427) [→ PR](https://github.com/ILIAS-eLearning/ILIAS/pull/10128)
+
+### Issue
+
+* The blurred background effect is missing in the modal background when using Firefox.
+
+### Changes
+
+![ui_modal_backdropfilter_blur_comparison.png](../../../_imgs/entries/2025/09-September/ui_modal_backdropfilter_blur_comparison.png)
+
+* Fix: Add blur effect via backdrop-filter to dialog::backdrop
+
+The animation does not work as Firefox has some known issues with backdrop-filter in combination with animations.
