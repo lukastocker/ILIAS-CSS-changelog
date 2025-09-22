@@ -73,3 +73,23 @@ UI Component (Input) ViewControl Pagination
 * Fix: Add blur effect via backdrop-filter to dialog::backdrop
 
 The animation does not work as Firefox has some known issues with backdrop-filter in combination with animations.
+
+---
+
+## Add Spacing to Header in Data Table component
+
+`small impact` `UI framework` `visual improvement`
+
+[→ Mantis Issue](https://mantis.ilias.de/view.php?id=45631) [→ PR](https://github.com/ILIAS-eLearning/ILIAS/pull/10129)
+
+### Issue
+
+* No visible spacing in between Header and Data Table
+
+### Changes
+
+![ui_datatable_header_spacing_comparison.png](../../../_imgs/entries/2025/09-September/ui_datatable_header_spacing_comparison.png)
+
+* Fix: Add spacing in between Header and Data Table (9px)
+
+
