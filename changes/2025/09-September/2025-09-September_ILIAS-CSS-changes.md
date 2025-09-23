@@ -53,3 +53,30 @@ UI Component (Input) ViewControl Pagination
 
 * Fix: No rendering of disabled pagination components (left and right rocker)
 * Fix: No rendering of pagination if only one page would be rendered
+
+---
+
+## Better Ordering Table Drag & Drop 44136
+
+`medium impact` `UI framework` `readability` `touch input` `drag & drop`
+
+[→ Mantis Issue](https://mantis.ilias.de/view.php?id=44136) [→ PR](https://github.com/ILIAS-eLearning/ILIAS/pull/9114)
+
+### Issue
+
+Drag and drop of ordering table doesn't work at all on touchscreens and in Webkit/Safari desktop.
+
+### Changes
+
+![ordering-table_change.png](../../../_imgs/entries/2025/09-September/ordering-table_change.png)
+
+* added a whole list of event listeners reproducing drag and drop on mobile
+* mobile doesn't scroll when reaching the edges of the screen, added detection and scroll behavior manually.
+* modifying the browser default desktop drag and drop behaviour so that Webkit/Safari is working. It still adds its own twist when drag and drop is stopping with a flyback animation that is not fitting, but I didn't look further into it for now.
+* added settle animation to make UI jump more pleasant
+* stopped row hovering during drag because it miscommunicates the drag position
+* @yvseiler provided me with some helpful best practices of how the drag and drop could be even more user friendly:
+    * add a ghostly double at the position where the item is dragged from
+    * visualized position where the item would be dropped as a gap in the table
+    * added a drag image to the finger position on touch, desktop behavior is mostly default browser behavior with minor tweaks so Safari cooperates.
+* settle animation uses CSS event to remove animation class
