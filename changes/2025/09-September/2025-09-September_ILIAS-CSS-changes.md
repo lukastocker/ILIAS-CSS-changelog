@@ -92,4 +92,27 @@ The animation does not work as Firefox has some known issues with backdrop-filte
 
 * Fix: Add spacing in between Header and Data Table (9px)
 
+---
 
+## Padding between label and asterisk
+
+`small impact` `UI framework` `visual improvement`
+
+[→ Mantis Issue](https://mantis.ilias.de/view.php?id=45648) [→ PR](https://github.com/ILIAS-eLearning/ILIAS/pull/10144)
+
+### Issue
+
+* In some cases there's no padding between a label and an asterisk
+
+### Changes
+
+![ui_label_asterisk_space_comparison](../../../_imgs/entries/2025/09-September/ui_label_asterisk_space_comparison.png)
+![ui_no_emptyspace_before_asterisk_tpl_comparison](../../../_imgs/entries/2025/09-September/ui_no_emptyspace_before_asterisk_tpl_comparison.png)
+
+* Fix: Add padding left to asterisk if parent tag is `label`
+* Fix: Remove "fake" padding (empty character) from property template before the asterisk
+* Fix: Add empty character after hidden title in the property template
+
+### Note
+
+There might still be some "fake" paddings in the code. This should be removed if identified.
