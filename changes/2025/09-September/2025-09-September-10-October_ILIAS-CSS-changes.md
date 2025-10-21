@@ -20,7 +20,7 @@ The following changes are made possible with resources from the [University of B
 
 ### Changes
 
-![assets_comparison-horizontal-split.png](../../../_imgs/entries/2025/09-September/assets_comparison-horizontal-split.png)
+![system-info-color-flip.png](../../../_imgs/entries/2025/09-September/system-info-color-flip.png)
 
 * There was an issue with the SCSS contrast tool that is supposed to switch the text to white not being loaded correctly - it's actually weird that this compiled at all.
 * added a restyling of links to guarantee visibility on dark backgrounds
@@ -80,3 +80,57 @@ Drag and drop of ordering table doesn't work at all on touchscreens and in Webki
     * visualized position where the item would be dropped as a gap in the table
     * added a drag image to the finger position on touch, desktop behavior is mostly default browser behavior with minor tweaks so Safari cooperates.
 * settle animation uses CSS event to remove animation class
+
+---
+
+## Toggle Component: Fix color contrast for ON state
+
+`small impact` `UI framework` `accessibility`
+
+[→ Mantis Issue](https://mantis.ilias.de/view.php?id=45424) [→ PR](https://github.com/ILIAS-eLearning/ILIAS/pull/10178)
+
+### Issue
+
+Background fill for toggle ON status is too light. It doesn't provide sufficient contrast for the white text.
+toggle_low-contrast-color
+
+### Change
+
+![toggle-constrast_a11y.png](../../../_imgs/entries/2025/09-September/toggle-constrast_a11y.png)
+
+Now forcing a lightness value of 30 using Sass color.change hsl value replacement. This might be a good approach to force a contrast in other places as well.
+toggle_accessible-color
+
+### Impact
+
+However, some clients of service providers do not like brand colors to be altered in this way, so we might want to introduce dedicated contrast color variables that brands could fill deliberately.
+
+---
+
+## Fix broken tooltips for bulky buttons and tabs
+
+[→ Mantis Issue](https://mantis.ilias.de/view.php?id=42421) [→ PR](https://github.com/ILIAS-eLearning/ILIAS/pull/10213)
+
+### Issue
+
+Attaching KS UI Tooltips to legacy elements breaks the design.
+
+### Changes
+
+![tooltips_bulky-btns_bulky-links_tabs.png](../../../_imgs/entries/2025/09-September/tooltips_bulky-btns_bulky-links_tabs.png)
+
+Following designs have been fixed to work with the additional container that the KS UI Tooltip requires:
+
+* in slate
+    * bulky-btn
+    * bulky-link
+* in mainbar
+    * bulky-btn
+    * bulky-link
+* Tabs
+* Sub-Tabs
+
+### Outlook
+
+Tabs and Sub-Tabs need to become UI components. Support for tooltips could then be a fully thought through feature and not a band-aid.
+Bulky concept has to be refined and more examples have to be added to the Kitchen Sink so testing is easier and the limits and recommendations can be communicated more clearly.
