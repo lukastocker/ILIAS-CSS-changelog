@@ -27,3 +27,27 @@ The following changes are made possible with resources from the [University of B
 * The keyframe values were adjusted as they did not work for chrome also
 
 ---
+
+## Spacing between H2 and Data/Ordering table
+
+`small impact` `UI framework`
+
+[→ Mantis Issue](https://mantis.ilias.de/view.php?id=45631) [→ PR](https://github.com/ILIAS-eLearning/ILIAS/pull/10129)
+
+### Issue
+
+* The space between the h2 and the data/ordering table is non existent. This differs from the standard SCSS setting.
+
+### Changes
+
+![ui_dt_ot_h2_spacing_comparison.png](../../../_imgs/entries/2025/10-October/ui_dt_ot_h2_spacing_comparison.png)
+
+* Remove `ilHeader` class from h2 in the ordering and data table template
+
+### Larger Scope
+
+As discussed in the CSS Squad as projects for the future:
+* for a better typography spacing system adapting first and last children, more awareness of what formatting came right before
+* for a nesting management that would bump up h2 to h3/h4/h5/h6 if nested accordingly
+
+---
