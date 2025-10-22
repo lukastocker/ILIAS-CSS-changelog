@@ -51,3 +51,27 @@ As discussed in the CSS Squad as projects for the future:
 * for a nesting management that would bump up h2 to h3/h4/h5/h6 if nested accordingly
 
 ---
+
+## Missing padding before asterisks
+
+`small impact` `UI framework`
+
+[→ Mantis Issue](https://mantis.ilias.de/view.php?id=45648) [→ PR](https://github.com/ILIAS-eLearning/ILIAS/pull/10144)
+
+### Issue
+
+* Some asterisks are missing padding 
+
+### Changes
+
+![ui_label_asterisk_space_comparison.png](../../../_imgs/entries/2025/10-October/ui_label_asterisk_space_comparison.png)
+
+* Add padding to asterisks via SCSS
+* The change for asterisk in the UI components has to be addressed via > .asterisk::first-child as sometimes there's an asterisk after an H-Tag which already got space in between.
+
+
+![ui_no_emptyspace_before_asterisk_tpl_comparison.png](../../../_imgs/entries/2025/10-October/ui_no_emptyspace_before_asterisk_tpl_comparison.png)
+
+* Remove blank characters after label in the property form template
+
+---
